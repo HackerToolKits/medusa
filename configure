@@ -6794,25 +6794,25 @@ case "$target" in
   *linux*)
     LIBDL="-ldl -lrt -lm"
     RDYNAMIC="-rdynamic"
-    MODULE_LIBS="$MODULE_LIBS -shared"
+    MODULE_LIBS="$MODULE_LIBS -static"
     EXTRA_LDFLAGS=""
     ;;
   *freebsd*)
     LIBDL="-lm"
     RDYNAMIC="-rdynamic"
-    MODULE_LIBS="$MODULE_LIBS -shared"
+    MODULE_LIBS="$MODULE_LIBS -static"
     EXTRA_LDFLAGS=""
     ;;
   *netbsd*)
     LIBDL="-lm"
     RDYNAMIC="-rdynamic"
-    MODULE_LIBS="$MODULE_LIBS -shared"
+    MODULE_LIBS="$MODULE_LIBS -static"
     EXTRA_LDFLAGS=""
     ;;
   *openbsd*)
     LIBDL="-lm"
     RDYNAMIC="-rdynamic"
-    MODULE_LIBS="$MODULE_LIBS -shared"
+    MODULE_LIBS="$MODULE_LIBS -static"
     EXTRA_LDFLAGS="-g -Wl,-E"
     ;;
   *apple-darwin*)
@@ -6841,12 +6841,12 @@ case "$target" in
     CPPFLAGS="$CPPFLAGS -DCYGWIN"
     LIBDL="-ldl"
     RDYNAMIC=""
-    MODULE_LIBS="$MODULE_LIBS -shared"
+    MODULE_LIBS="$MODULE_LIBS -static"
     ;;
   *)
     LIBDL="-ldl -lm"
     RDYNAMIC="-rdynamic"
-    MODULE_LIBS="$MODULE_LIBS -shared"
+    MODULE_LIBS="$MODULE_LIBS -static"
     EXTRA_LDFLAGS=""
     ;;
 esac
